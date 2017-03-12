@@ -6,7 +6,7 @@ body
 .caption
 {
     text-align: center;
-    font-size: 200px;
+    font-size: 100px;
     font-weight: bold;
     margin-top: 50px;
     font-family: "Brush Script MT",cursive;
@@ -33,6 +33,7 @@ body
 {
 	margin: auto;
 	text-align: center;
+	padding: 50px;
 }
 /* entire container, keeps perspective */
 .flip-container
@@ -107,6 +108,34 @@ body
 
 /* back, initially hidden pane */
 .wind-back
+{
+	transform: rotateY(180deg);
+}
+
+/* front pane, placed above back */
+.panel-front
+{
+	background-image: url("../image/panel.png");
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.panel-back
+{
+	transform: rotateY(180deg);
+}
+
+/* front pane, placed above back */
+.sun-front
+{
+	background-image: url("../image/sun.png");
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.sun-back
 {
 	transform: rotateY(180deg);
 }
