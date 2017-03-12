@@ -1,0 +1,112 @@
+body
+{
+	background-image: url("../image/background.jpg");
+	text-align:center;
+}
+.caption
+{
+    text-align: center;
+    font-size: 200px;
+    font-weight: bold;
+    margin-top: 50px;
+    font-family: "Brush Script MT",cursive;
+	opacity: 1;
+}
+
+.data
+{
+	font-size: 30px;
+	font-family: "Segoe UI";
+	padding-top: 10px;
+	text-shadow: 2px 1px 2px black;
+}
+
+.sql
+{
+	font-size: 30px;
+	font-family: "Segoe UI";
+	padding-top: 50px;
+	text-shadow: 2px 1px 2px black;
+}
+
+.data-sensors
+{
+	margin: auto;
+	text-align: center;
+}
+/* entire container, keeps perspective */
+.flip-container
+{
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper
+{
+	transform: rotateY(180deg);
+}
+
+.flip-container, .temp-front, .temp-back, .wind-front, .wind-back, .panel-front, .panel-back, .sun-front, .sun-back
+{
+	margin: auto;
+	width: 270px;
+	height: 380px;
+}
+
+/* flip speed goes here */
+.flipper 
+{
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.temp-front, .temp-back, .wind-front, .wind-back, .panel-front, .panel-back, .sun-front, .sun-back
+{
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.temp-front
+{
+	background-image: url("../image/temp.png");
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.temp-back
+{
+	transform: rotateY(180deg);
+}
+
+/* front pane, placed above back */
+.wind-front
+{
+	background-image: url("../image/wind.png");
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.wind-back
+{
+	transform: rotateY(180deg);
+}
+
+/* front pane, placed above back */
+.wind-front
+{
+	background-image: url("../image/wind.png");
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.wind-back
+{
+	transform: rotateY(180deg);
+}
